@@ -5,7 +5,7 @@ import defaultValue from "../services/default";
 import * as api from "../api";
 import { getCurrentMenu, getSessionKey } from '../common/utils'
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 const store = new Vuex.Store({
   strict: true,  // process.env.NODE_ENV !== 'production', 直接修改state 抛出异常
@@ -17,6 +17,7 @@ const store = new Vuex.Store({
     userInfo:state => state.userInfo,
     device:state => state.device,
     currentMenus:state => state.currentMenus,
+    title:state => state.title,
   },
   state: {
     loading: false,
@@ -30,6 +31,7 @@ const store = new Vuex.Store({
     },
     userInfo:{name:'佚名'},
     currentMenus:[],
+    title: '首页',
   },
   mutations: {
     //只能同步的函数
@@ -44,6 +46,9 @@ const store = new Vuex.Store({
     },
     [types.LOAD_CURRENT_MENU] (state, menu) {
       state.currentMenus = menu;
+    },
+    [types.SET_SELECT_TITLE] (state, title) {
+      state.currentMenus = title;
     },
     [types.SET_USER_INFO] (state, info) {
       state.userInfo = info;

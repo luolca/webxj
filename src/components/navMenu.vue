@@ -57,15 +57,19 @@
     font-size: medium;
   }
   .icon-right {
+    position: absolute;
+    right: 15%;
     display:inline;
     margin-right: 15px;
     font-size: medium;
-    float: right;
   }
   .nav {
-    height: 100px;
+    position: fixed;
+    z-index: 3;
+    min-width: 100%;
+    height: 32px;
     margin-left: 200px;
-    padding-top: 65px;
+    margin-top: 62px;
     background-color: #ffff;
   }
   .fa-icon {

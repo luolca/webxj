@@ -108,20 +108,6 @@
         toggleSidebarShow: types.TOGGLE_SIDEBAR_SHOW,
         setUserInfo: types.SET_USER_INFO,
       }),
-      toggleMessage(){
-        this.showMessageBox = !this.showMessageBox;
-      },
-      toggleProfile(){
-        this.showProfileBox = !this.showProfileBox;
-      },
-      autoHide(evt) {
-        if (!this.$el.querySelector('li.messages-menu').contains(evt.target)) {
-          this.showMessageBox = false
-        }
-        if (!this.$el.querySelector('li.user-menu').contains(evt.target)) {
-          this.showProfileBox = false
-        }
-      }
     },
     created(){
       let item = window.sessionStorage.getItem("user-info");

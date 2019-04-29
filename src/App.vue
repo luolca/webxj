@@ -12,10 +12,11 @@
               <el-breadcrumb-item :to="{ path: child.href }">{{child.name}}</el-breadcrumb-item>
             </template>
           </el-breadcrumb-->
+          <!--span class="title">{{title}}</span-->
           <transition mode="out-in" enter-active-class="fadeIn" leave-active-class="fadeOut" appear>
             <router-view></router-view>
           </transition>
-          <imp-footer></imp-footer>
+          <!--imp-footer></imp-footer-->
         </section>
       </el-scrollbar>
     </div>
@@ -39,7 +40,7 @@
       impFooter,
       impHeader,
       navMenu
-    },
+},
     computed: {
       ...mapGetters({
         sidebar: 'sidebar',
@@ -53,6 +54,7 @@
         active: true,
         headerFixed: true,
         breadcrumb: [],
+        title: '首页',
       }
     },
     methods: {
@@ -74,6 +76,11 @@
     },
     watch: {
       '$route': function (to, from) {
+        if (to.name) {
+          this.title = to.name;
+        } else {
+          this.title = '首页'
+        }
       }
     },
     beforeMount () {
@@ -153,7 +160,7 @@
     -moz-transition: -moz-transform 0.3s ease-in-out, margin 0.3s ease-in-out;
     -o-transition: -o-transform 0.3s ease-in-out, margin 0.3s ease-in-out;
     transition: transform 0.3s ease-in-out, margin 0.3s ease-in-out;
-    margin-left: 230px;
+    margin-left: 200px;
     padding-top: 50px;
   }
 
@@ -167,6 +174,8 @@
 
   .content-wrapper .content {
     padding: 1.25rem;
+    padding-bottom: 0;
+    margin-top: 3rem;
   }
 
   .content-wrapper.slideCollapse{
@@ -175,6 +184,12 @@
 
   .content-wrapper.mobileSide{
     margin-left: 0px;
+  }
+  .content-wrapper .title{
+    margin-left: 30px;
+    color: #2f5398;
+    font-size: 20px;
+    font-weight: bold;
   }
   .sidebar-toggle {
     float: left;

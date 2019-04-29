@@ -1,6 +1,6 @@
 import dashboard from "../pages/dashboard.vue";
 import NotFoundView from "../components/404.vue";
-import menuList from "../pages/sys/menu.vue";
+import knowledge from "../pages/knowledge";
 import role from "../pages/sys/role.vue";
 import resource from "../pages/sys/resource.vue";
 import login from "../pages/login.vue";
@@ -20,8 +20,8 @@ const routes = [
     path: '', component: app, children: [
     {path: '/resetPwd', component: resetPwd},
     {path: '/index', component: dashboard},
-    {path: '/sys/menuList', component: menuList},
-    {path: '/sys/roleList', component: role},
+    {path: '/knowledge', component: knowledge, name: '知识库管理'},
+    {path: '/sys/roleList', component: role, name: '什么鬼的管理'},
     {path: '/sys/userList', component: sysUser},
     {path: '/sys/userAdd', component: userAdd},
     {path: '/sys/resource', component: resource}

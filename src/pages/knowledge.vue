@@ -1,115 +1,59 @@
 <template>
-  <imp-panel>
+  <imp-panel class="main">
     <h3 class="box-title" slot="header" style="width: 100%;">
-      <el-row style="width: 100%;">
+      <el-row style="width: 100%; float: right">
         <el-col :span="12">
-          <router-link :to="{ path: 'userAdd'}">
-            <el-button type="primary" icon="plus">新增</el-button>
-          </router-link>
-        </el-col>
-        <el-col :span="12">
-          <div class="el-input" style="width: 200px; float: right;">
-            <i class="el-input__icon el-icon-search"></i>
-            <input type="text" placeholder="输入用户名称" v-model="searchKey" @keyup.enter="search($event)"
-                   class="el-input__inner">
-          </div>
+          <b style="padding-top: 2px">知识库条件搜索：</b>
+          <div class="el-input" style="width: 200px;">
+              <i class="el-input__icon el-icon-search"></i>
+              <input type="text" placeholder="输入查询条件" v-model="searchKey" @keyup.enter="search($event)"
+                     class="el-input__inner">
+            </div>
         </el-col>
       </el-row>
     </h3>
-    <div slot="body">
-      <el-table
-        :data="tableData.rows"
-        border
-        style="width: 100%"
-        v-loading="listLoading"
-        @selection-change="handleSelectionChange">
-        <!--checkbox 适当加宽，否则IE下面有省略号 https://github.com/ElemeFE/element/issues/1563-->
-        <el-table-column
-          prop="id"
-          type="selection"
-          width="50">
-        </el-table-column>
-        <el-table-column
-          label="照片" width="76">
-          <template slot-scope="scope">
-            <img :src='scope.row.avatar' style="height: 35px;vertical-align: middle;" alt="">
-          </template>
-        </el-table-column>
-        <el-table-column
-          prop="name"
-          label="名称">
-        </el-table-column>
-        <el-table-column
-          prop="nickName"
-          label="登录用户名">
-        </el-table-column>
-        <el-table-column
-          prop="email"
-          label="邮箱">
-        </el-table-column>
-        <el-table-column
-          label="状态">
-          <template slot-scope="scope">
-            {{ scope.row.status===1 ? '已激活' : '未激活' }}
-          </template>
-        </el-table-column>
-        <el-table-column label="操作" width="285">
-          <template slot-scope="scope">
-            <el-button
-              size="small"
-              type="default"
-              icon="edit"
-              @click="handleEdit(scope.$index, scope.row)">编辑
-            </el-button>
-            <el-button
-              size="small"
-              type="info"
-              icon="setting"
-              @click="handleRoleConfig(scope.$index, scope.row)">配置角色
-            </el-button>
-            <el-button
-              size="small"
-              type="danger"
-              @click="handleDelete(scope.$index, scope.row)">删除
-            </el-button>
-          </template>
-        </el-table-column>
-      </el-table>
-
+    <el-scrollbar class="table">
+      <el-col class="row">
+        <b style="color: blue;border: 2px;border-bottom: #2f5398;margin-left: 10px">11111</b>
+        <a style="margin-left: 5px">
+          <i class="fa fa-eye" style="margin-left: 2px" aria-hidden="true"></i>
+          <i class="fa fa-pencil-square-o" style="margin-left: 2px" aria-hidden="true"></i>
+          <i class="fa fa-trash" style="margin-left: 2px" aria-hidden="true"></i>
+        </a>
+        <span class="text">的时间JFK洒家分厘卡机看来飞机离开双方的安居房立刻就的说法看来就是的法律框架是考虑对方立刻大师傅尽量克服的撒娇看来抵扣税款大家快来发动机路口附近的撒旦发生sjlsanmfsdna,dassdaddsa阿三打撒dsasa啊实打实大大dsdadsadasddaadsmdadadkjldasjldsajkldashjdaskdaskdsakjlsdajlkdsakjldsajklljadskadsn,dfnsdnf,adsn,dsfn,msdan</span>
+      </el-col>
+      <el-col class="row">
+        <b style="color: blue;border: 2px;border-bottom: #2f5398;margin-left: 10px">11111</b>
+        <span class="text">的时间JFK洒家分厘卡机看来飞机离开双方的安居房立刻就的说法看来就是的法律框架是考虑对方立刻大师傅尽量克服的撒娇看来抵扣税款大家快来发动机路口附近的撒旦发生sjlsanmfsdna,dassdaddsa阿三打撒dsasa啊实打实大大dsdadsadasddaadsmdadadkjldasjldsajkldashjdaskdaskdsakjlsdajlkdsakjldsajklljadskadsn,dfnsdnf,adsn,dsfn,msdan</span>
+      </el-col>
+      <el-col class="row">
+        <h4 style="color: blue;border: 2px;border-bottom: #2f5398;margin-left: 10px">11111</h4>
+        <span class="text">的时间JFK洒家分厘卡机看来飞机离开双方的安居房立刻就的说法看来就是的法律框架是考虑对方立刻大师傅尽量克服的撒娇看来抵扣税款大家快来发动机路口附近的撒旦发生sjlsanmfsdna,dassdaddsa阿三打撒dsasa啊实打实大大dsdadsadasddaadsmdadadkjldasjldsajkldashjdaskdaskdsakjlsdajlkdsakjldsajklljadskadsn,dfnsdnf,adsn,dsfn,msdan</span>
+      </el-col>
+      <el-col class="row">
+        <h4 style="color: blue;border: 2px;border-bottom: #2f5398;margin-left: 10px">11111</h4>
+        <span class="text">的时间JFK洒家分厘卡机看来飞机离开双方的安居房立刻就的说法看来就是的法律框架是考虑对方立刻大师傅尽量克服的撒娇看来抵扣税款大家快来发动机路口附近的撒旦发生sjlsanmfsdna,dassdaddsa阿三打撒dsasa啊实打实大大dsdadsadasddaadsmdadadkjldasjldsajkldashjdaskdaskdsakjlsdajlkdsakjldsajklljadskadsn,dfnsdnf,adsn,dsfn,msdan</span>
+      </el-col>
+      <el-col class="row">
+        <h4 style="color: blue;border: 2px;border-bottom: #2f5398;margin-left: 10px">11111<i class="fa fa-eye" style="margin-left: 2px" aria-hidden="true"></i> </h4>
+        <span class="text">的时间JFK洒家分厘卡机看来飞机离开双方的安居房立刻就的说法看来就是的法律框架是考虑对方立刻大师傅尽量克服的撒娇看来抵扣税款大家快来发动机路口附近的撒旦发生sjlsanmfsdna,dassdaddsa阿三打撒dsasa啊实打实大大dsdadsadasddaadsmdadadkjldasjldsajkldashjdaskdaskdsakjlsdajlkdsakjldsajklljadskadsn,dfnsdnf,adsn,dsfn,msdan</span>
+      </el-col>
+      <el-col class="row">
+        <h4 style="color: blue;border: 2px;border-bottom: #2f5398;margin-left: 10px">11111<i class="fa fa-eye" style="margin-left: 2px" aria-hidden="true"></i> </h4>
+        <span class="text">的时间JFK洒家分厘卡机看来飞机离开双方的安居房立刻就的说法看来就是的法律框架是考虑对方立刻大师傅尽量克服的撒娇看来抵扣税款大家快来发动机路口附近的撒旦发生sjlsanmfsdna,dassdaddsa阿三打撒dsasa啊实打实大大dsdadsadasddaadsmdadadkjldasjldsajkldashjdaskdaskdsakjlsdajlkdsakjldsajklljadskadsn,dfnsdnf,adsn,dsfn,msdan</span>
+      </el-col>
+      <el-col class="row">
+        <h4 style="color: blue;border: 2px;border-bottom: #2f5398;margin-left: 10px">11111<i class="fa fa-eye" style="margin-left: 2px" aria-hidden="true"></i> </h4>
+        <span class="text">的时间JFK洒家分厘卡机看来飞机离开双方的安居房立刻就的说法看来就是的法律框架是考虑对方立刻大师傅尽量克服的撒娇看来抵扣税款大家快来发动机路口附近的撒旦发生sjlsanmfsdna,dassdaddsa阿三打撒dsasa啊实打实大大dsdadsadasddaadsmdadadkjldasjldsajkldashjdaskdaskdsakjlsdajlkdsakjldsajklljadskadsn,dfnsdnf,adsn,dsfn,msdan</span>
+      </el-col>
+    </el-scrollbar>
       <el-pagination
-        @size-change="handleSizeChange"
-        @current-change="handleCurrentChange"
-        :current-page="tableData.pagination.pageNo"
-        :page-sizes="[5, 10, 20]"
-        :page-size="tableData.pagination.pageSize"
-        layout="total, sizes, prev, pager, next, jumper"
-        :total="tableData.pagination.total">
+        small
+        :page-size="20"
+        :pager-count="11"
+        layout="prev, pager, next"
+        :total="1000">
       </el-pagination>
-
-      <el-dialog title="配置用户角色" v-model="dialogVisible" size="tiny">
-        <div class="select-tree">
-          <el-scrollbar
-            tag="div"
-            class='is-empty'
-            wrap-class="el-select-dropdown__wrap"
-            view-class="el-select-dropdown__list">
-            <el-tree
-              ref="roleTree"
-              :data="roleTree"
-              show-checkbox
-              check-strictly
-              node-key="id" v-loading="dialogLoading"
-              :props="defaultProps">
-            </el-tree>
-          </el-scrollbar>
-        </div>
-        <span slot="footer" class="dialog-footer">
-          <el-button @click="dialogVisible = false">取 消</el-button>
-          <el-button type="primary" @click="configUserRoles">确 定</el-button>
-          </span>
-      </el-dialog>
-    </div>
-
 
   </imp-panel>
 </template>
@@ -145,49 +89,6 @@
       search(target){
         this.loadData();
       },
-      handleSelectionChange(val){
-
-      },
-      handleRoleConfig(index, row){
-        this.currentRow = row;
-        this.dialogVisible = true;
-        if (this.roleTree.length <= 0) {
-          sysApi.roleList({selectChildren:true})
-            .then(res => {
-              this.roleTree = res
-            })
-        }
-        this.$http.get(api.SYS_USER_ROLE + "?id=" + row.id)
-          .then(res => {
-            this.$refs.roleTree.setCheckedKeys(res.data);
-          }).catch(err=>{
-
-        })
-      },
-      configUserRoles(){
-        let checkedKeys = this.$refs.roleTree.getCheckedKeys();
-        this.$http.get(api.SYS_SET_USER_ROLE + "?userId=" + this.currentRow.id + "&roleIds="+checkedKeys.join(','))
-          .then(res => {
-            this.$message('修改成功');
-            this.dialogVisible = false;
-          })
-      },
-      handleSizeChange(val) {
-        this.tableData.pagination.pageSize = val;
-        this.loadData();
-      },
-      handleCurrentChange(val) {
-        this.tableData.pagination.pageNo = val;
-        this.loadData();
-      },
-      handleEdit(index, row){
-        this.$router.push({path: 'userAdd', query: {id: row.id}})
-      },
-      handleDelete(index, row){
-        this.$http.get(api.SYS_USER_DELETE + "?userIds=" + row.id).then(res => {
-          this.loadData();
-        });
-      },
       loadData(){
         sysApi.userList({
           key: this.searchKey,
@@ -210,5 +111,27 @@
   .el-pagination {
     float: right;
     margin-top: 15px;
+  }
+  .main {
+    height: calc(93vh - 100px);
+  }
+  .table {
+    height: 100%;
+    margin-top: 5px;
+    margin-left: 30px
+  }
+  .row {
+    width: 100%;
+    padding: 5px;
+    padding-top: 0;
+  }
+  .text {
+    padding-top: 10px;
+    width: 70%;
+    height: 20%;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 </style>
