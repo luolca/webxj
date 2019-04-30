@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper fixed">
+  <div class="wrapper fixed" id="app">
     <vue-progress-bar></vue-progress-bar>
     <imp-header></imp-header>
     <side-menu></side-menu>
@@ -29,6 +29,8 @@
   import impHeader from "./pages/layout/header.vue"
   import impFooter from "./pages/layout/footer.vue"
   import navMenu from "./components/navMenu"
+  import * as sysApi from './services/sys'
+  import  auth from './common/auth'
   import {mapGetters, mapActions,mapMutations} from 'vuex'
   import types from "./store/mutation-types"
   import 'animate.css'
@@ -62,10 +64,25 @@
         toggleDevice: types.TOGGLE_DEVICE,
         toggleSidebar: types.TOGGLE_SIDEBAR,
         toggleSidebarShow: types.TOGGLE_SIDEBAR_SHOW,
+        setUserInfo: types.SET_USER_INFO
       }),
       ...mapActions({
         changeCurrentMenu: 'changeCurrentMenu' // 映射 this.changeCurrentMenu() 为 this.$store.dispatch('changeCurrentMenu')
       }),
+      login(){
+        sysApi.login(this.form).then(res => {
+          console.dir(res);
+          this.loginSuccess({...res})
+        })
+      },
+      loginSuccess({sid,user}){
+        auth.login(sid);
+        window.sessionStorage.setItem("user-info", JSON.stringify(user));
+        console.dir(types.SET_USER_INFO)
+        this.setUserInfo(user);
+        this.$http.defaults.headers.common['authSid'] = sid;
+        this.loadMenuList();
+      },
       toggleMenu(collapsed,isMobile){
         if(isMobile){
           this.toggleSidebarShow();
@@ -108,6 +125,8 @@
       this.$Progress.finish()
     },
     created () {
+      this.$router.push({path: '/index'});
+      this.login();
       //  [App.vue specific] When App.vue is first loaded start the progress bar
       this.$Progress.start()
       //  hook the progress bar to start before we move router-view

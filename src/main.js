@@ -40,6 +40,6 @@ Object.keys(filters).forEach(key => {
 new Vue({
   store,
   router,
-  el: "#root",
+  el: "#app",
   render: h => h(frame)
 })
