@@ -5,7 +5,7 @@
       <i class="fa fa-icon fa-angle-double-left fa-1x"></i>
     </div>
     <div class="icon-left">
-      <i class="fa fa-icon fa-home fa-1x"><b>首页</b></i>
+      <i class="fa fa-icon fa-home fa-1x" @click="ret"><b>首页</b></i>
     </div>
     <!--el-tag
       :key="tag"
@@ -47,6 +47,9 @@
         toggleSidebarShow: types.TOGGLE_SIDEBAR_SHOW,
         setUserInfo: types.SET_USER_INFO,
       }),
+      ret() {
+        this.$router.push({path: '/index'});
+      }
     },
   }
 </script>

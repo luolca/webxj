@@ -16,7 +16,7 @@
       <el-col class="row">
         <b style="color: blue;border: 2px;border-bottom: #2f5398;margin-left: 10px">11111</b>
         <a style="margin-left: 5px">
-          <i class="fa fa-eye" style="margin-left: 2px" aria-hidden="true"></i>
+          <i class="fa fa-eye" style="margin-left: 2px" aria-hidden="true" @click="dialogVisible = true"></i>
           <i class="fa fa-pencil-square-o" style="margin-left: 2px" aria-hidden="true"></i>
           <i class="fa fa-trash" style="margin-left: 2px" aria-hidden="true"></i>
         </a>
@@ -54,22 +54,77 @@
         layout="prev, pager, next"
         :total="1000">
       </el-pagination>
+    <el-dialog title="配置资源" v-model="dialogVisible" custom-class="dialog">
+      <el-form ref="form" :model="form" label-width="100px">
+        <el-form-item label="用户名：">
+          <el-input v-model="form.name" size="medium"></el-input>
+        </el-form-item>
+        <el-form-item label="登录用户名：">
+          <el-input v-model="form.nickName"></el-input>
+        </el-form-item>
+        <el-form-item label="手机：">
+          <el-input v-model="form.phone"></el-input>
+        </el-form-item>
+        <el-form-item label="邮箱：">
+          <el-input v-model="form.email"></el-input>
+        </el-form-item>
+        <el-form-item label="工号：">
+          <el-input v-model="form.no"></el-input>
+        </el-form-item>
+        <el-form-item label="固定电话：">
+          <el-input v-model="form.phone"></el-input>
+        </el-form-item>
+        <el-form-item label="状态：">
+          <el-radio-group v-model="form.status">
+            <el-radio :label="0">未激活</el-radio>
+            <el-radio :label="1">已激活</el-radio>
+          </el-radio-group>
+        </el-form-item>
+        <el-form-item label="用户类型：">
+          <el-radio-group v-model="form.userType">
+            <el-radio label="0">注册用户</el-radio>
+            <el-radio label="1">后台配置用户</el-radio>
+          </el-radio-group>
+        </el-form-item>
+        <el-form-item label="备注：">
+          <el-input type="textarea" v-model="form.remarks"></el-input>
+        </el-form-item>
+      </el-form>
+      <span slot="footer" class="dialog-footer">
+          <el-button @click="dialogVisible = false">取 消</el-button>
+          <el-button type="primary">确 定</el-button>
+          </span>
+    </el-dialog>
 
   </imp-panel>
 </template>
 
 <script>
+  import * as sysApi from '../services/sys'
+  import * as api from "../api"
   export default {
     name: "knowledge",
     data(){
       return {
         currentRow: {},
         dialogVisible: false,
-        dialogLoading: false,
         defaultProps: {
           children: 'children',
           label: 'name',
           id: "id",
+        },
+        form: {
+          id: null,
+          no: '',
+          name: '',
+          nickName: '',
+          phone: '',
+          email: '',
+          mobile: '',
+          status: 1,
+          userType: '1',
+          remarks: '',
+          a: null
         },
         roleTree: [],
         listLoading: false,
@@ -99,15 +154,29 @@
             this.tableData.rows = res.records;
             this.tableData.pagination.total = res.total;
           });
+      },
+      change() {
+        let accounts = {
+          0:{A : 1, B: '1', C : '1', D : '1'},
+          1:{A : 1, B: '1', C : '1', D : '1'}
+        };
+        let list = new Array();
+        list.push(accounts["0"]);
+        console.dir(list);
+        this.form.a = list;
+          this.$http.post(api.SYS_USER_UPDATE, this.form)
+            .then(res => {
+            })
       }
     },
     created(){
       this.loadData();
+       this.change();
     }
   }
 </script>
 
-<style scoped>
+<style>
   .el-pagination {
     float: right;
     margin-top: 15px;
@@ -133,5 +202,30 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+  .dialog {
+    width:900px;
+  }
+  .dialog  .el-dialog__header {
+    padding-top: 0;
+    background: #2f5398;
+  }
+  .dialog .el-dialog__title {
+    color: #ffff;
+  }
+  .dialog .el-dialog__headerbtn .el-dialog__close {
+    color: #ffff;
+    font-size: 10px;
+  }
+  .dialog .el-dialog__body {
+    padding: 30px 40px;
+  }
+  .dialog .el-form .el-form-item__label {
+    text-align: right;
+    padding-left: 0;
+  }
+  .main .dialog .el-form  .el-input {
+    height: 36px;
+    width: 280px;
   }
 </style>

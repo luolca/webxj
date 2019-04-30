@@ -15,7 +15,7 @@ axios.defaults.headers.common[ 'authSid' ] = auth.getSid();
 //POST传参序列化
 axios.interceptors.request.use((config) => {
   if (config.method === 'post') {
-    config.data = qs.stringify(config.data);
+    // config.data = qs.stringify(config.data);
   }
   return config;
 }, (error) => {
