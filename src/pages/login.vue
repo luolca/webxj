@@ -34,7 +34,7 @@
         <div class="login-register">
           <div class="card-block">
             <h2>注册</h2>
-            <p>平台暂时只支持使用公司邮箱注册.</p>
+            <p>平台暂时只支持使用公司邮箱注册1111.</p>
             <el-button type="info" class="btn btn-primary active m-t-1"> 马上注册</el-button>
           </div>
         </div>
