@@ -13,47 +13,33 @@
       </el-row>
     </h3>
     <el-scrollbar class="table">
-      <el-col class="row">
-        <b style="color: blue;border: 2px;border-bottom: #2f5398;margin-left: 10px">11111</b>
-        <a style="margin-left: 5px">
-          <i class="fa fa-eye" style="margin-left: 2px" aria-hidden="true" @click="dialogVisible = true"></i>
-          <i class="fa fa-pencil-square-o" style="margin-left: 2px" aria-hidden="true"></i>
-          <i class="fa fa-trash" style="margin-left: 2px" aria-hidden="true"></i>
-        </a>
-        <span class="text">的时间JFK洒家分厘卡机看来飞机离开居房立刻就的说法看来就是的法律框架是考虑对方立刻大师傅尽量克服的撒娇看来抵扣税款大家快来发动机路口附近的撒旦发生sjlsanmfsdna,dassdaddsa阿三打撒dsasa啊实打实大大dsdadsadasddaadsmdadadkjldasjldsajkldashjdaskdaskdsakjlsdajlkdsakjldsajklljadskadsn,dfnsdnf,adsn,dsfn,msdan</span>
-      </el-col>
-      <el-col class="row">
-        <b style="color: blue;border: 2px;border-bottom: #2f5398;margin-left: 10px">11111</b>
-        <span class="text">的时间JFK洒家分厘卡机看来飞机离开双方的安居房立刻就的说法看来就是的法律框架是考虑对方立刻大师傅尽量克服的撒娇看来抵扣税款大家快来发动机路口附近的撒旦发生sjlsanmfsdna,dassdaddsa阿三打撒dsasa啊实打实大大dsdadsadasddaadsmdadadkjldasjldsajkldashjdaskdaskdsakjlsdajlkdsakjldsajklljadskadsn,dfnsdnf,adsn,dsfn,msdan</span>
-      </el-col>
-      <el-col class="row">
-        <h4 style="color: blue;border: 2px;border-bottom: #2f5398;margin-left: 10px">11111</h4>
-        <span class="text">的时间JFK洒家分厘卡机看来飞机离开双方的安居房立刻就的说法看来就是的法律框架是考虑对方立刻大师傅尽量克服的撒娇看来抵扣税款大家快来发动机路口附近的撒旦发生sjlsanmfsdna,dassdaddsa阿三打撒dsasa啊实打实大大dsdadsadasddaadsmdadadkjldasjldsajkldashjdaskdaskdsakjlsdajlkdsakjldsajklljadskadsn,dfnsdnf,adsn,dsfn,msdan</span>
-      </el-col>
-      <el-col class="row">
-        <h4 style="color: blue;border: 2px;border-bottom: #2f5398;margin-left: 10px">11111</h4>
-        <span class="text">的时间JFK洒家分厘卡机看来飞机离开双方的安居房立刻就的说法看来就是的法律框架是考虑对方立刻大师傅尽量克服的撒娇看来抵扣税款大家快来发动机路口附近的撒旦发生sjlsanmfsdna,dassdaddsa阿三打撒dsasa啊实打实大大dsdadsadasddaadsmdadadkjldasjldsajkldashjdaskdaskdsakjlsdajlkdsakjldsajklljadskadsn,dfnsdnf,adsn,dsfn,msdan</span>
-      </el-col>
-      <el-col class="row">
-        <h4 style="color: blue;border: 2px;border-bottom: #2f5398;margin-left: 10px">11111<i class="fa fa-eye" style="margin-left: 2px" aria-hidden="true"></i> </h4>
-        <span class="text">的时间JFK洒家分厘卡机看来飞机离开双方的安居房立刻就的说法看来就是的法律框架是考虑对方立刻大师傅尽量克服的撒娇看来抵扣税款大家快来发动机路口附近的撒旦发生sjlsanmfsdna,dassdaddsa阿三打撒dsasa啊实打实大大dsdadsadasddaadsmdadadkjldasjldsajkldashjdaskdaskdsakjlsdajlkdsakjldsajklljadskadsn,dfnsdnf,adsn,dsfn,msdan</span>
-      </el-col>
-      <el-col class="row">
-        <h4 style="color: blue;border: 2px;border-bottom: #2f5398;margin-left: 10px">11111<i class="fa fa-eye" style="margin-left: 2px" aria-hidden="true"></i> </h4>
-        <span class="text">的时间JFK洒家分厘卡机看来飞机离开双方的安居房立刻就的说法看来就是的法律框架是考虑对方立刻大师傅尽量克服的撒娇看来抵扣税款大家快来发动机路口附近的撒旦发生sjlsanmfsdna,dassdaddsa阿三打撒dsasa啊实打实大大dsdadsadasddaadsmdadadkjldasjldsajkldashjdaskdaskdsakjlsdajlkdsakjldsajklljadskadsn,dfnsdnf,adsn,dsfn,msdan</span>
-      </el-col>
-      <el-col class="row">
-        <h4 style="color: blue;border: 2px;border-bottom: #2f5398;margin-left: 10px">11111<i class="fa fa-eye" style="margin-left: 2px" aria-hidden="true"></i> </h4>
-        <span class="text">的时间JFK洒家分厘卡机看来飞机离开双方的安居房立刻就的说法看来就是的法律框架是考虑对方立刻大师傅尽量克服的撒娇看来抵扣税款大家快来发动机路口附近的撒旦发生sjlsanmfsdna,dassdaddsa阿三打撒dsasa啊实打实大大dsdadsadasddaadsmdadadkjldasjldsajkldashjdaskdaskdsakjlsdajlkdsakjldsajklljadskadsn,dfnsdnf,adsn,dsfn,msdan</span>
-      </el-col>
+      <el-collapse style="height: 100%" v-for="(item, index) in list" :key="index" >
+        <el-collapse-item>
+          <template slot="title">
+            <b style="color: #2f5398">{{item.title}}</b>
+            <el-dropdown style="margin-left: 30px">
+                <span class="el-dropdown-link">
+                  <i class="el-icon-more el-icon--right"></i>
+                </span>
+              <el-dropdown-menu slot="dropdown">
+                <el-dropdown-item @click.native="open('add', item, index)"><i class="el-icon-plus"></i>&nbsp;&nbsp;新增</el-dropdown-item>
+                <el-dropdown-item @click.native="open('delete', item, index)"><i class="el-icon-delete"></i>&nbsp;&nbsp;删除</el-dropdown-item>
+                <el-dropdown-item @click.native="open('edit', item, index)"><i class="el-icon-edit"></i>&nbsp;&nbsp;编辑</el-dropdown-item>
+                <!--el-dropdown-item @click.native="open('publish', item, index)"><i class="el-icon-upload2"></i>&nbsp;&nbsp;发布</el-dropdown-item-->
+              </el-dropdown-menu>
+            </el-dropdown>
+          </template>
+          <div>{{item.message}}</div>
+        </el-collapse-item>
+      </el-collapse>
     </el-scrollbar>
-      <el-pagination
-        small
-        :page-size="20"
-        :pager-count="11"
-        layout="prev, pager, next"
-        :total="1000">
-      </el-pagination>
+    <el-pagination
+      small
+      :page-size="20"
+      :pager-count="11"
+      layout="prev, pager, next"
+      :total="1000">
+    </el-pagination>
     <el-dialog title="配置资源" v-model="dialogVisible" custom-class="dialog">
       <el-form ref="form" :model="form" label-width="100px">
         <el-form-item label="用户名：">
@@ -91,28 +77,26 @@
         </el-form-item>
       </el-form>
       <span slot="footer" class="dialog-footer">
-          <el-button @click="dialogVisible = false">取 消</el-button>
-          <el-button type="primary">确 定</el-button>
-          </span>
+        <el-button @click="dialogVisible = false">取 消</el-button>
+        <el-button type="primary">确 定</el-button>
+         <el-button type="primary">审 核</el-button>
+        <el-button type="primary" @click="addNext">继续新增</el-button>
+      </span>
     </el-dialog>
-
+   <!--button @click="open()">加密</button-->
   </imp-panel>
 </template>
 
 <script>
   import * as sysApi from '../services/sys'
+  import * as def from '../services/default'
   import * as api from "../api"
+  import CryptoJS from "crypto-js";
   export default {
     name: "knowledge",
     data(){
       return {
-        currentRow: {},
         dialogVisible: false,
-        defaultProps: {
-          children: 'children',
-          label: 'name',
-          id: "id",
-        },
         form: {
           id: null,
           no: '',
@@ -129,6 +113,17 @@
         roleTree: [],
         listLoading: false,
         searchKey: '',
+        list: [
+          {id: '1', name:'lca', phone: '123432212112', message:'的死灵法师缴费基数卡斯柯不怕ask量较大恐龙女i圣诞节安芙兰if阿萨斯多你放你离开的死灵法师缴费基数卡斯柯不怕ask量较大恐龙女i圣诞节安芙兰if阿萨斯多你放你离开' +
+              '的死灵法师缴费基数卡斯柯不怕ask量较大恐龙女i圣诞节安芙兰if阿萨斯多你放你离开的死灵法师缴费基数卡斯柯不怕ask量较大恐龙女i圣诞节安芙兰if阿萨斯多你放你离开', title: '11'},
+          {id: '2', name:'lca', phone: '123432212112', message:'的死灵法师缴费基数卡斯柯不怕ask量较大恐龙女i圣诞节安芙兰if阿萨斯多你放你离开', title: '22'},
+          {id: '3', name:'lca', phone: '123432212112', message:'的死灵法师缴费基数卡斯柯不怕ask量较大恐龙女i圣诞节安芙兰if阿萨斯多你放你离开', title: '33'},
+          {id: '4', name:'lca', phone: '123432212112', message:'的死灵法师缴费基数卡斯柯不怕ask量较大恐龙女i圣诞节安芙兰if阿萨斯多你放你离开', title: '44'},
+          {id: '5', name:'lca', phone: '123432212112', message:'的死灵法师缴费基数卡斯柯不怕ask量较大恐龙女i圣诞节安芙兰if阿萨斯多你放你离开', title: '44'},
+          {id: '6', name:'lca', phone: '123432212112', message:'的死灵法师缴费基数卡斯柯不怕ask量较大恐龙女i圣诞节安芙兰if阿萨斯多你放你离开', title: '44'},
+          {id: '7', name:'lca', phone: '123432212112', message:'的死灵法师缴费基数卡斯柯不怕ask量较大恐龙女i圣诞节安芙兰if阿萨斯多你放你离开', title: '44'},
+          {id: '8', name:'lca', phone: '123432212112', message:'的死灵法师缴费基数卡斯柯不怕ask量较大恐龙女i圣诞节安芙兰if阿萨斯多你放你离开', title: '44'},
+        ],
         tableData: {
           pagination: {
             total: 0,
@@ -136,7 +131,7 @@
             pageSize: 10,
             parentId: 0
           },
-          rows: []
+          rows: [],
         }
       }
     },
@@ -145,7 +140,9 @@
         this.loadData();
       },
       loadData(){
-        sysApi.userList({
+        this.rows = this.list;
+        console.dir(this.rows);
+        /*sysApi.userList({
           key: this.searchKey,
           pageSize: this.tableData.pagination.pageSize,
           pageNo: this.tableData.pagination.pageNo
@@ -153,26 +150,33 @@
           .then(res => {
             this.tableData.rows = res.records;
             this.tableData.pagination.total = res.total;
-          });
+          });*/
       },
-      change() {
-        let accounts = {
-          0:{A : 1, B: '1', C : '1', D : '1'},
-          1:{A : 1, B: '1', C : '1', D : '1'}
-        };
-        let list = new Array();
-        list.push(accounts["0"]);
-        console.dir(list);
-        this.form.a = list;
-          this.$http.post(api.SYS_USER_UPDATE, this.form)
-            .then(res => {
-            })
+      open(command, item, index) {
+        console.dir(item);
+        console.dir(command);
+        console.dir(index);
+        if (command === 'add' || command === 'edit') {
+          this.dialogVisible = !this.dialogVisible;
+        }
+      },
+      addNext() {
+        this.form = new Form();
       }
     },
     created(){
       this.loadData();
-       this.change();
-    }
+    },
+  }
+  export function Form() {
+    this.id = null;
+    this.no = ''; // 组织机构名称
+    this.name = ''; //  组织状态默认为1
+    this.nickName =  ''; // 联系人
+    this.phone =''; // 电话
+    this.email = ''; // 组织地址
+    this.mobile = ''; // 备注
+    this.status =  1;
   }
 </script>
 
@@ -185,14 +189,24 @@
     height: calc(93vh - 100px);
   }
   .table {
-    height: 100%;
+    height: calc(80vh - 200px);
     margin-top: 5px;
-    margin-left: 30px
+    margin-left: 30px;
+    overflow-x: hidden;
+  }
+  .table .el-scrollbar__wrap {
+    overflow-x: hidden;
+    width: calc(90vw - 150px);
+    height: 100%;
   }
   .row {
     width: 100%;
     padding: 5px;
     padding-top: 0;
+  }
+  .row .el-dropdown-link {
+    cursor: pointer;
+    color: #409EFF;
   }
   .text {
     padding-top: 10px;
@@ -205,6 +219,7 @@
   }
   .dialog {
     width:900px;
+    top: 5% !important;
   }
   .dialog  .el-dialog__header {
     padding-top: 0;

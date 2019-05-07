@@ -75,7 +75,7 @@
         if (this.$route.query && this.$route.query != null && this.$route.query.redirect && this.$route.query.redirect != null) {
           redirectUrl = this.$route.query.redirect;
         }
-        sysApi.login(this.form).then(res => {
+        sysApi.messageListlogin(this.form).then(res => {
           this.loginSuccess({...res,redirectUrl})
         })
       },

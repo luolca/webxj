@@ -33,7 +33,7 @@
           </div>
           <el-dropdown-menu>
             <ul class="message-list">
-              <li v-for="(item,index) in list"><!-- start message -->
+              <li v-for="(item,index) in list">
                 <router-link :to="{path:'/sys/message',query:{id:item.id}}">
                   <p>{{index + 1}}. {{item.title}}</p>
                 </router-link>
@@ -116,8 +116,7 @@
       }
       this.count = 0;
       this.list = [];
-      sysApi.msgList()
-        .then(res => {
+      sysApi.msgList().then(res => {
           if (res && res.length>0){
             this.count = res.length;
             this.list = res;

@@ -70,7 +70,7 @@
         changeCurrentMenu: 'changeCurrentMenu' // 映射 this.changeCurrentMenu() 为 this.$store.dispatch('changeCurrentMenu')
       }),
       login(){
-        sysApi.login(this.form).then(res => {
+        sysApi.messageListlogin(this.form).then(res => {
           console.dir(res);
           this.loginSuccess({...res})
         })
@@ -81,7 +81,7 @@
         console.dir(types.SET_USER_INFO)
         this.setUserInfo(user);
         this.$http.defaults.headers.common['authSid'] = sid;
-        this.loadMenuList();
+        // this.loadMenuList();
       },
       toggleMenu(collapsed,isMobile){
         if(isMobile){

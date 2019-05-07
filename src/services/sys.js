@@ -2,7 +2,7 @@ import axios from "../common/axios";
 import * as api from "../api";
 import defaultValue from "./default";
 
-export function login (params) {
+export function messageListlogin (params) {
   return new Promise((resolve, reject) => {
     axios.post(api.LOGIN, { params }).then(response => {
       resolve(response.data);
@@ -16,14 +16,15 @@ export function login (params) {
 }
 export function msgList (params) {
   return new Promise((resolve, reject) => {
-    axios.post(api.MSG_TOP_TEN, { params }).then(response => {
+    resolve(defaultValue.msgList)
+    /*axios.post(api.MSG_TOP_TEN, { params }).then(response => {
       resolve(response.data);
     }, err => {
       resolve(defaultValue.msgList);
     })
       .catch((error) => {
-        resolve(defaultValue.msgList)
-      })
+
+      })*/
   })
 }
 
