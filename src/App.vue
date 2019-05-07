@@ -55,7 +55,6 @@
       return {
         active: true,
         headerFixed: true,
-        breadcrumb: [],
         title: '首页',
       }
     },
@@ -78,7 +77,6 @@
       loginSuccess({sid,user}){
         auth.login(sid);
         window.sessionStorage.setItem("user-info", JSON.stringify(user));
-        console.dir(types.SET_USER_INFO)
         this.setUserInfo(user);
         this.$http.defaults.headers.common['authSid'] = sid;
         // this.loadMenuList();

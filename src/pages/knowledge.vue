@@ -5,10 +5,10 @@
         <el-col :span="12">
           <b style="padding-top: 2px">知识库条件搜索：</b>
           <div class="el-input" style="width: 200px;">
-              <i class="el-input__icon el-icon-search"></i>
-              <input type="text" placeholder="输入查询条件" v-model="searchKey" @keyup.enter="search($event)"
-                     class="el-input__inner">
-            </div>
+            <i class="el-input__icon el-icon-search"></i>
+            <input type="text" placeholder="输入查询条件" v-model="searchKey" @keyup.enter="search($event)"
+                   class="el-input__inner">
+          </div>
         </el-col>
       </el-row>
     </h3>
@@ -18,14 +18,14 @@
           <template slot="title">
             <b style="color: #2f5398">{{item.title}}</b>
             <el-dropdown style="margin-left: 30px">
-                <span class="el-dropdown-link">
-                  <i class="el-icon-more el-icon--right"></i>
-                </span>
+              <span class="el-dropdown-link">
+                <i class="el-icon-more el-icon--right"></i>
+              </span>
               <el-dropdown-menu slot="dropdown">
                 <el-dropdown-item @click.native="open('add', item, index)"><i class="el-icon-plus"></i>&nbsp;&nbsp;新增</el-dropdown-item>
                 <el-dropdown-item @click.native="open('delete', item, index)"><i class="el-icon-delete"></i>&nbsp;&nbsp;删除</el-dropdown-item>
                 <el-dropdown-item @click.native="open('edit', item, index)"><i class="el-icon-edit"></i>&nbsp;&nbsp;编辑</el-dropdown-item>
-                <!--el-dropdown-item @click.native="open('publish', item, index)"><i class="el-icon-upload2"></i>&nbsp;&nbsp;发布</el-dropdown-item-->
+                <el-dropdown-item @click.native="open('publish', item, index)"><i class="el-icon-upload2"></i>&nbsp;&nbsp;审核</el-dropdown-item>
               </el-dropdown-menu>
             </el-dropdown>
           </template>
@@ -79,11 +79,10 @@
       <span slot="footer" class="dialog-footer">
         <el-button @click="dialogVisible = false">取 消</el-button>
         <el-button type="primary">确 定</el-button>
-         <el-button type="primary">审 核</el-button>
         <el-button type="primary" @click="addNext">继续新增</el-button>
       </span>
     </el-dialog>
-   <!--button @click="open()">加密</button-->
+    <!--button @click="open()">加密</button-->
   </imp-panel>
 </template>
 
